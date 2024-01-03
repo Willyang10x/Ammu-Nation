@@ -205,3 +205,7 @@ footer {
 .minha-div h2 {
     text-decoration: underline;
 }
+
+@media screen and (max-wight: 780px){
+    
+}

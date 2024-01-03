@@ -1,0 +1,101 @@
+/* Estilos Globais */
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+#wrapper{
+    background-color: #000000;
+    width:900px;
+    float:inherit;
+    position: relative;
+    margin: 0 auto 0 auto;
+
+}
+
+
+#ammu{
+    width: 200px;
+    margin-left: 300px;
+    height: 200px;
+}
+
+header{
+    padding: 30px 0 5px 30px;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightyellow;
+}
+
+
+.serve1{
+    background-color: black;
+    color: black;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 12px;
+    font-style: inherit;
+    
+}
+
+h2{
+    background-color: #ffffff;
+    float: solid;
+    padding-left: 10px;
+    margin-right: 2px;
+}
+
+h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+h5{
+    margin-right: auto;
+}
+
+h6 {
+    background-color: #FFD700; /* Amarelo (#FFD700) é usado como fundo */
+    padding: 10px; /* Adicione preenchimento para espaço interno */
+    text-align: center; /* Centralize o texto horizontalmente */
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #ff0000;
+    font-size: 18px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto, pode ser ajustada conforme necessário */
+    margin: 0; /* Remova as margens padrão para evitar espaço extra */
+}
+
+.centero{
+    margin-left: 500px;
+}
+
+nav{
+    float: left;
+    background-color: rgb(255, 0, 0);
+}
+
+.botao-voltar img {
+    height: 45px;
+    margin: 45px;
+    vertical-align: middle; /* Alinhe a imagem verticalmente com o texto */
+    margin-right: 5px; /* Espaçamento à direita da imagem */
+}
+
+footer {
+    background-color: #ff0000;
+    font-family: Impact, Impact, HaettenschweilerS, 'Arial Narrow Bold', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}

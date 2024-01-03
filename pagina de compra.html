@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pagina de comprar.css"> 
+    <link rel="icon" type="image/x.icon" href="imagem/logo ammu.jpg"> 
+    <title>Loja de Armas AMMU NATION</title>
+    <script src="script.js"></script>
+</head>
+
+
+
+<body>
+    
+
+      <div4 id= "wrapper">
+       <h6>Carrinho de compras</h6>
+        <header>
+          <div4 class="centero">
+            <h1>AMMU NATION</h1>
+          </div4> 
+
+        <body>
+            <a href="exercicio07.html" class="botao-voltar">
+                <img src="imagem/botao-voltar.png" alt="Voltar">
+            </a>
+        </body>
+       
+    
+</body>
+
+        </header>
+    </div1>
+       <head>
+        <main class="produtos">
+          <section class="produto">
+                <img src="imagem/image-removebg-preview (18).png" alt="Produto 1">
+                <h2>Carabina brigade</h2>
+                <p>CAL 9MM</p>
+                <p class="preco">$15.580,00</p>
+                <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
+            
+        </section>
+
+        <section class="produto">
+                <img class="img3" src="imagem/image-removebg-preview (19).png" alt="Produto 2" >
+                <h2>Produto 2</h2>
+                <p>Descrição do Produto 2.</p>
+                <p class="preco">$40.00</p>
+                <button class="adicionar-ao-carrinho">Adicionar ao Carrinho</button>
+            
+        </section>
+      </main>
+
+
+            <!-- Adicione mais produtos semelhantes aqui -->
+    
+        </section>
+    
+        <section class="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul class="itens-carrinho">
+                <!-- Itens do carrinho serão adicionados dinamicamente em JavaScript -->
+            </ul>
+            <p class="total">Total: $0.00</p>
+        </section>
+    
+        <section class="checkout">
+            <h2>Checkout</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="endereco">CPF:</label>
+                <input type="text" id="endereco" name="endereco" required>
+    
+                <button class="finalizar-compra">Finalizar Compra</button>
+            </form>
+        </section>
+    </head>
+            
+<body>
+    <header>
+        <h3></h3>
+        <nav>
+           
+        </nav>
+    </header>
+
+    
+
+    <footer>Copyright ® 2023 | Willyan Gabriel</footer>
+</div> 
+
+</body>
+
+<script>
+  // Array para armazenar os produtos no carrinho
+  const carrinho = [];
+
+  // Função para adicionar um produto ao carrinho
+  function adicionarAoCarrinho(nome, preco) {
+    const item = { nome, preco };
+    carrinho.push(item);
+    atualizarCarrinho();
+  }
+
+  // Função para atualizar a exibição do carrinho
+  function atualizarCarrinho() {
+    const listaCarrinho = document.querySelector(".itens-carrinho");
+    listaCarrinho.innerHTML = "";
+
+    let total = 0;
+    carrinho.forEach(item => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${item.nome}: $${item.preco}`;
+      listaCarrinho.appendChild(listItem);
+      total += item.preco;
+    });
+
+    document.querySelector(".total").textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  // Adicionar um evento de clique a todos os botões "Adicionar ao Carrinho"
+  const botoesAdicionarAoCarrinho = document.querySelectorAll(".adicionar-ao-carrinho");
+  botoesAdicionarAoCarrinho.forEach(botao => {
+    botao.addEventListener("click", () => {
+      const produto = botao.parentNode;
+      const nome = produto.querySelector("h2").textContent;
+      const preco = parseFloat(produto.querySelector(".preco").textContent.replace("$", ""));
+      adicionarAoCarrinho(nome, preco);
+    });
+  });
+
+  // Adicionar um evento de clique ao botão "Finalizar Compra"
+  const botaoFinalizarCompra = document.querySelector(".finalizar-compra");
+  botaoFinalizarCompra.addEventListener("click", () => {
+    // Você pode implementar a lógica de checkout aqui, como enviar os itens para um servidor.
+    // Neste exemplo, apenas exibiremos um alerta.
+    alert("Compra finalizada! Itens no carrinho: " + JSON.stringify(carrinho));
+  });
+</script>
+
+  
+  
